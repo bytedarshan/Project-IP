@@ -73,3 +73,4 @@ with open('output.csv', mode='a', newline='') as file:
 
 print("Data exported to CSV file successfully.")
 
+a=input()
