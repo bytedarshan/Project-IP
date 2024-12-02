@@ -1,4 +1,5 @@
 import mysql.connector
+import sys
 import importlib
 import csv
 print("                      |----------------------------------------------------------------------|")
@@ -39,6 +40,9 @@ if row:
     print(f"                      |            SRP: {srp}                                               |")
 else:
     print("                      |            Item Not Found")
+    e=input("                      |            Press any key to exit")
+    sys.exit()
+    
 
 qty=int(input("                      |            Enter the quantity required :"))
 
