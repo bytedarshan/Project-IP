@@ -59,14 +59,14 @@ print("                      |--------------------------------------------------
 print("                                             Name of item -",name_of_item)
 print("                                             Quantity -",qty)
 print("                                             Price -",srp,'/-')
-tax=srp*0.18
+tax=srp*0.18 #Tax on Selling Price
 print("                                             Tax -",tax,'/-')
-total=(srp+tax)*qty
+total=(srp+tax)*qty #Total Price After adding Tax
 print("                                             Total -",total,'/- ONLY')
 print("                      |----------------------------------------------------------------------|")
 update_query = ("UPDATE STOCK SET QUANTITY = %s "
                 "WHERE BARCODE_NUMBER = %s")
-new_value = quantity - qty  # Adjust this logic if needed
+new_value = quantity - qty  
 condition_value = barcode_number
 cursor.execute(update_query, (new_value, condition_value))
 db.commit()  # Commit the update
